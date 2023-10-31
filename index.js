@@ -36,7 +36,7 @@ inquirer
             type: 'list',
             name: 'selectedShape',
             message: 'Select a shape for the logo:',
-            choices: ['circle', 'rectangle', 'triangle', 'star'],
+            choices: ['circle', 'square', 'triangle', 'rectangle', 'star'],
         },
         {
             type: 'list',
