@@ -1,0 +1,6 @@
+
+        <svg width="250" height="250">
+            <text x="20" y="50" fill="green">mba</text>
+            <circle r="125" cx="125" cy="125" fill="red"></circle>
+        </svg>
+    
