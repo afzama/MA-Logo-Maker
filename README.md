@@ -10,6 +10,8 @@ STEP 1 Clone the code from github repository to VSCode and run npx jest. This wi
 STEP 2 Open index.js file in integrated terminal, and run command node index.js to answer inquirer prompts to generate logo
 STEP 3 Download the SVG generated logo for use
 
+![alt text](./assets/npx%20jest%20pass.jpegjpeg)
+
 ## Usage
 This video walks through the above steps in detail.
 https://watch.screencastify.com/v/gJkB2am19hkjdCHIITNi 
