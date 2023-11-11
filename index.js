@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const chalk = require('chalk')
 
 function generateLogo(logoCharacters, textColor, selectedShape, logoColor) {
     const shapes = {
@@ -11,8 +12,8 @@ function generateLogo(logoCharacters, textColor, selectedShape, logoColor) {
     const logoShape = shapes[selectedShape]; // Assign the selected shape to the logoShape variable
     const logoSVG = `
         <svg width="250" height="250">
-            <text x="20" y="50" fill="${textColor}">${logoCharacters}</text>
             ${logoShape}
+            <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="${textColor}" font-size="24">${logoCharacters}</text>
         </svg>
     `;
     return logoSVG;
@@ -48,8 +49,8 @@ inquirer
         const { logoCharacters, textColor, selectedShape, logoColor } = answers;
         const newLogo = generateLogo(logoCharacters, textColor, selectedShape, logoColor);
 
-        // Output the generated logo to the console
-        console.log(newLogo);
+        // Output the generated logo to the console with chalk styling
+        console.log(chalk.keyword(textColor)(newLogo));
 
         // Save the logo to an SVG file 
         fs.writeFileSync('generated_logo.svg', newLogo);
